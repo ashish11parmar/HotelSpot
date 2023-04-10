@@ -19,7 +19,7 @@ mongoose.set('strictQuery',true);
 const connect = async () => {
     try {
       await mongoose.connect(DB_URL);
-      console.log("Connected to mongoDB.");
+      console.log("MongoDB Connected....");
     } catch (error) {
       throw error;
     }
@@ -45,6 +45,6 @@ const connect = async () => {
 
   app.listen(PORT, () => {
     connect();
-    console.log("Connected to backend.");
+    console.log(`Local:     http://localhost:${PORT}`);
   });
 
